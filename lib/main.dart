@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'screens/login/login.dart';
+import 'package:flutter_single_code/screens/tasks/tasks.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,19 +13,43 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Single Code',
-      darkTheme: ThemeData(
+      theme: ThemeData(
+        useMaterial3: false,
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         textTheme: TextTheme(
-          displayLarge: TextStyle(color: Colors.grey[900], fontSize: 36),
-          displayMedium: TextStyle(color: Colors.grey[900], fontSize: 32),
-          displaySmall: TextStyle(color: Colors.grey[900], fontSize: 28),
-          headlineLarge: TextStyle(color: Colors.grey[900], fontSize: 24),
-          headlineMedium: TextStyle(color: Colors.grey[900], fontSize: 20),
+          displayLarge: TextStyle(
+            color: Colors.grey[900],
+            fontSize: 36,
+            fontWeight: FontWeight.w700,
+          ),
+          displayMedium: TextStyle(
+            color: Colors.grey[900],
+            fontSize: 32,
+            fontWeight: FontWeight.w700,
+          ),
+          displaySmall: TextStyle(
+            color: Colors.grey[900],
+            fontSize: 28,
+            fontWeight: FontWeight.w600,
+          ),
+          headlineLarge: TextStyle(
+            color: Colors.grey[900],
+            fontSize: 24,
+            fontWeight: FontWeight.w700,
+          ),
+          headlineMedium: TextStyle(
+            color: Colors.grey[900],
+            fontSize: 20,
+            fontWeight: FontWeight.w700,
+          ),
           headlineSmall: TextStyle(color: Colors.grey[900], fontSize: 18),
-          titleLarge: TextStyle(color: Colors.grey[900], fontSize: 16),
+          titleLarge: TextStyle(
+            color: Colors.grey[900],
+            fontSize: 16,
+            fontWeight: FontWeight.w600,
+          ),
           titleMedium: TextStyle(color: Colors.grey[900], fontSize: 14),
           titleSmall: TextStyle(color: Colors.grey[900], fontSize: 12),
-
           bodyLarge: TextStyle(color: Colors.black, fontSize: 16),
           bodyMedium: TextStyle(color: Colors.black, fontSize: 14),
           bodySmall: TextStyle(color: Colors.black, fontSize: 12),
@@ -35,7 +58,7 @@ class MyApp extends StatelessWidget {
           labelSmall: TextStyle(color: Colors.black, fontSize: 10),
         ),
       ),
-      home: const LoginScreen(),
+      home: const TasksScreen(),
     );
   }
 }

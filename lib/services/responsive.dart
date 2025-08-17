@@ -11,14 +11,14 @@ class Responsive extends StatelessWidget {
   final Widget? tablet;
   final Widget? desktop;
 
-  /// Bootstrap grid view
+  /// Bootstrap breakpoints
   static bool isMobile(BuildContext context) =>
-      MediaQuery.of(context).size.width < 650;
+      MediaQuery.of(context).size.width < 576;
   static bool isTablet(BuildContext context) =>
-      MediaQuery.of(context).size.width >= 650 &&
-      MediaQuery.of(context).size.width < 1000;
+      MediaQuery.of(context).size.width >= 576 &&
+      MediaQuery.of(context).size.width < 768;
   static bool isDesktop(BuildContext context) =>
-      MediaQuery.of(context).size.width >= 1000;
+      MediaQuery.of(context).size.width >= 768;
 
   @override
   Widget build(BuildContext context) {
