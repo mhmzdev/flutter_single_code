@@ -61,7 +61,7 @@ class MyApp extends StatelessWidget {
       ),
       routes: appRoutes,
       onGenerateRoute: onGenerateRoute,
-      initialRoute: AppRoutes.tasks,
+      initialRoute: AppRoutes.login,
     );
   }
 }
