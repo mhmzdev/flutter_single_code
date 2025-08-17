@@ -5,7 +5,7 @@ class _Desktop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Screen(
       body: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "name": "Flutter (iOS)",
+            "type": "dart",
+            "request": "launch",
+            "program": "lib/main.dart",
+            "deviceId": "ios"
+        },
+        {
+            "name": "Flutter (Android)",
+            "deviceId": "emulator-5554",
+            "type": "dart",
+            "request": "launch",
+        },
+        {
+            "name": "Flutter (Web)",
+            "type": "dart",
+            "request": "launch",
+            "program": "lib/main.dart",
+            "deviceId": "chrome"
+        }
+    ]
+}

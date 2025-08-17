@@ -1,5 +1,5 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_single_code/services/responsive.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_single_code/widgets/screen/screen.dart';
 import 'package:provider/provider.dart';
 
@@ -7,25 +7,21 @@ part 'views/_desktop.dart';
 part 'views/_mobile.dart';
 part 'views/_tablet.dart';
 
+part 'widgets/_header.dart';
+
 part '_state.dart';
 
-/// {@template login}
-/// LoginScreen widget.
-/// {@endtemplate}
-class LoginScreen extends StatelessWidget {
-  /// {@macro login}
-  const LoginScreen({
-    super.key, // ignore: unused_element
-  });
+class PinScreen extends StatelessWidget {
+  const PinScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
+    return ChangeNotifierProvider<_ScreenState>(
       create: (_) => _ScreenState(),
-      child: Responsive(
+      child: const Responsive(
         mobile: _Mobile(),
-        tablet: _Tablet(),
         desktop: _Desktop(),
+        tablet: _Tablet(),
       ),
     );
   }

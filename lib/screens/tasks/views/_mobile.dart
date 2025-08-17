@@ -5,7 +5,8 @@ class _Mobile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Screen(
+      bottomBar: true,
       drawer: Drawer(
         child: SafeArea(child: _CategoriesList()),
       ),

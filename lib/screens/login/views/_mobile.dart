@@ -5,6 +5,6 @@ class _Mobile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Center(child: Text('Login Mobile')));
+    return Screen(body: Center(child: Text('Login Mobile')));
   }
 }
