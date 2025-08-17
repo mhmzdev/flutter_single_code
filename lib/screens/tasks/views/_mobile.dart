@@ -1,0 +1,10 @@
+part of '../tasks.dart';
+
+class _Mobile extends StatelessWidget {
+  const _Mobile();
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(body: Center(child: Text('Tasks Mobile')));
+  }
+}
