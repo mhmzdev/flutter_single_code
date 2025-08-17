@@ -2,7 +2,7 @@ import 'package:flutter_single_code/models/task.dart';
 import 'package:flutter_single_code/models/category.dart';
 
 // Work Tasks
-final List<Task> workTasks = [
+List<Task> workTasks = [
   Task(
     id: 1,
     title: "Complete Flutter project setup",
@@ -54,7 +54,7 @@ final List<Task> workTasks = [
 ];
 
 // Personal Tasks
-final List<Task> personalTasks = [
+List<Task> personalTasks = [
   Task(
     id: 7,
     title: "Go for morning run",
@@ -112,7 +112,7 @@ final List<Task> personalTasks = [
 ];
 
 // Health & Fitness Tasks
-final List<Task> healthTasks = [
+List<Task> healthTasks = [
   Task(
     id: 14,
     title: "Drink 8 glasses of water",
@@ -156,7 +156,7 @@ final List<Task> healthTasks = [
 ];
 
 // Categories with their respective tasks
-final List<Category> mockCategories = [
+List<Category> mockCategories = [
   Category(
     id: 1,
     name: "Work",
@@ -175,7 +175,7 @@ final List<Category> mockCategories = [
 ];
 
 // Legacy list for backward compatibility
-final List<Task> mockTasks = [
+List<Task> mockTasks = [
   ...workTasks,
   ...personalTasks,
   ...healthTasks,
