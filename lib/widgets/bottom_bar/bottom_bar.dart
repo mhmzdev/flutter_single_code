@@ -10,29 +10,6 @@ class BottomBar extends StatelessWidget {
   Widget build(BuildContext context) {
     final currentRoute = ModalRoute.of(context)?.settings.name;
 
-    final list = [
-      _Data(
-        title: 'Tasks',
-        icon: Icons.home,
-        route: AppRoutes.tasks,
-      ),
-      _Data(
-        title: 'Calendar',
-        icon: Icons.calendar_month,
-        route: AppRoutes.calendar,
-      ),
-      _Data(
-        title: 'Pin',
-        icon: Icons.pin,
-        route: AppRoutes.pin,
-      ),
-      _Data(
-        title: 'Profile',
-        icon: Icons.person,
-        route: AppRoutes.profile,
-      ),
-    ];
-
     return Container(
       padding: EdgeInsets.fromLTRB(
         16,
