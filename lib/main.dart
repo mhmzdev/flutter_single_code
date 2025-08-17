@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_single_code/screens/tasks/tasks.dart';
+import 'package:flutter_single_code/router/router.dart';
+import 'package:flutter_single_code/router/routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -58,7 +59,9 @@ class MyApp extends StatelessWidget {
           labelSmall: TextStyle(color: Colors.black, fontSize: 10),
         ),
       ),
-      home: const TasksScreen(),
+      routes: appRoutes,
+      onGenerateRoute: onGenerateRoute,
+      initialRoute: AppRoutes.tasks,
     );
   }
 }

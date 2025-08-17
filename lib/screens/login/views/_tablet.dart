@@ -5,6 +5,6 @@ class _Tablet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Center(child: Text('Login Tablet')));
+    return Screen(body: Center(child: Text('Login Tablet')));
   }
 }

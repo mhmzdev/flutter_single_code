@@ -7,7 +7,7 @@ class _Tablet extends StatelessWidget {
   Widget build(BuildContext context) {
     final screenState = _ScreenState.s(context, true);
     final currentTask = screenState.currentTask;
-    return Scaffold(
+    return Screen(
       endDrawer: Drawer(
         child: currentTask == null
             ? null
@@ -16,6 +16,7 @@ class _Tablet extends StatelessWidget {
               ),
       ),
       body: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Expanded(child: _CategoriesList()),
           Expanded(flex: 2, child: _TasksList()),
