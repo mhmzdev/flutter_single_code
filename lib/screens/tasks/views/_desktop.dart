@@ -7,6 +7,7 @@ class _Desktop extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Expanded(child: _CategoriesList()),
           Expanded(flex: 2, child: _TasksList()),

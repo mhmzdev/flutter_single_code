@@ -7,9 +7,9 @@ class _Mobile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: Drawer(
-        child: _CategoriesList(),
+        child: SafeArea(child: _CategoriesList()),
       ),
-      body: _TasksList(),
+      body: SafeArea(child: _TasksList()),
     );
   }
 }

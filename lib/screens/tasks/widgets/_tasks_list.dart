@@ -22,7 +22,7 @@ class _TasksListState extends State<_TasksList> {
     final category = screenState.category;
     final tasks = category.tasks;
 
-    return Padding(
+    return SingleChildScrollView(
       padding: const EdgeInsets.all(12),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -51,6 +51,7 @@ class _TasksListState extends State<_TasksList> {
               border: OutlineInputBorder(),
             ),
             onFieldSubmitted: (title) {
+              if (title.isEmpty) return;
               screenState.addTask(title);
               _addController.clear();
             },
@@ -76,6 +77,28 @@ class _TasksListState extends State<_TasksList> {
                 screenState.setCurrentTask(task);
                 if (Responsive.isTablet(context)) {
                   Scaffold.of(context).openEndDrawer();
+                } else if (Responsive.isMobile(context)) {
+                  showModalBottomSheet(
+                    context: context,
+                    isScrollControlled: true,
+                    useSafeArea: true,
+                    backgroundColor: Colors.transparent,
+                    builder: (_) {
+                      return ListenableProvider.value(
+                        value: screenState,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.vertical(
+                            top: Radius.circular(12),
+                          ),
+                          child: Material(
+                            color: Colors.white,
+                            elevation: 0,
+                            child: _TaskDetailsForm(task: task),
+                          ),
+                        ),
+                      );
+                    },
+                  );
                 }
               },
             ),
