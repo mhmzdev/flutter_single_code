@@ -5,6 +5,11 @@ class _Mobile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Center(child: Text('Tasks Mobile')));
+    return Scaffold(
+      drawer: Drawer(
+        child: _CategoriesList(),
+      ),
+      body: _TasksList(),
+    );
   }
 }

@@ -30,6 +30,17 @@ class Category {
     };
   }
 
+  Category copyWith({
+    String? name,
+    List<Task>? tasks,
+  }) {
+    return Category(
+      id: id,
+      name: name ?? this.name,
+      tasks: tasks ?? this.tasks,
+    );
+  }
+
   @override
   String toString() {
     return 'Category(id: $id, name: $name, tasks: $tasks)';

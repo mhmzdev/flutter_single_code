@@ -5,6 +5,14 @@ class _Desktop extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Center(child: Text('Tasks Desktop')));
+    return Scaffold(
+      body: Row(
+        children: [
+          Expanded(child: _CategoriesList()),
+          Expanded(flex: 2, child: _TasksList()),
+          Expanded(child: _TaskDetails()),
+        ],
+      ),
+    );
   }
 }

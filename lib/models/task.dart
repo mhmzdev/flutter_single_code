@@ -33,6 +33,21 @@ class Task {
     };
   }
 
+  Task copyWith({
+    String? title,
+    String? description,
+    DateTime? createdAt,
+    bool? completed,
+  }) {
+    return Task(
+      id: id,
+      title: title ?? this.title,
+      description: description ?? this.description,
+      createdAt: createdAt ?? this.createdAt,
+      completed: completed ?? this.completed,
+    );
+  }
+
   @override
   String toString() {
     return 'Task(id: $id, title: $title, description: $description, createdAt: $createdAt, completed: $completed)';
