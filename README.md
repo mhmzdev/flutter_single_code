@@ -4,8 +4,8 @@ This repo is giving a minimal example of setting up and managing the single code
 | A complete guide is available in [architecture_guide.md](docs/architecture_guide.md)
 
 ## 📸 Video & Written Tutorial
-- YouTube video series: <<<<>>>>. If you want to follow the progress, you can follow along the Parts branches given.
-- Written tutorial: 
+- YouTube video series: https://youtu.be/_ZASShlSHs8. If you want to follow the progress, you can follow along the Parts branches given.
+- Written tutorial: https://mhmzdev.medium.com/the-art-of-managing-single-code-base-flutter-part-01-80ab2ad2ad9d
 
 <a href="https://youtube.com/happyfluttering"><img src="showcase/youtube.png" width="500" height="auto" alt="art of managing single code youtube"></a>
 
